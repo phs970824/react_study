@@ -1,0 +1,31 @@
+.container {
+    padding: 30px;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.list {
+    > li {
+        margin-bottom: 1rem;
+        &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.subList {
+    li {
+        margin-left: 1rem;
+        padding: 1rem 0;
+    }
+    strong {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}
