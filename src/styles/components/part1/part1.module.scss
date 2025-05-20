@@ -1,0 +1,67 @@
+.Wrap {
+    li {
+        padding-bottom: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.contents {
+    color: navy;
+    border: 3px solid currentColor;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    button {
+        cursor: pointer;
+    }
+}
+
+.child {
+    color: #2da743;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: currentColor;
+    margin-bottom: 2rem;
+}
+
+.box1 {
+    display: flex;
+    gap: 1rem;
+    input {
+        border: 2px solid #000;
+        border-radius: 5px;
+        &:focus {
+            border: 2px solid red;
+            outline: 2px solid red;
+        }
+    }
+    button {
+        background: lightpink;
+        padding: 0.8rem;
+        color: #000;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+}
+
+.box2 {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ccc;
+    > div {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        button {
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}

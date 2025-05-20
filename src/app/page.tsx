@@ -1,15 +1,41 @@
-import Link from 'next/link';
-import styles from './page.module.scss';
+"use client";
+import { useState } from "react";
+
+// components
+import Header from "./components/layout/header";
+import Part1 from "./components/part1/Part1";
+
+// styles
+import styles from "./page.module.scss";
+
+type dataType = {
+    id: number;
+    title: string;
+};
 
 export default function Home() {
+    const data: dataType[] = [{ id: 0, title: "5/21 useRef" }];
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
     return (
-        <main className={styles.container}>
-            <h1 className={styles.title}>REACT 스터디</h1>
-            <ul>
-                <li>
-                    <Link href="/study1">1. hook 정리</Link>
-                </li>
-            </ul>
-        </main>
+        <>
+            <Header />
+            <main className={styles.main}>
+                {activeIndex === null && (
+                    <ul className={styles.list}>
+                        {data.map((item, idx) => {
+                            return (
+                                <li key={item.id}>
+                                    <button type="button" onClick={() => setActiveIndex(idx)}>
+                                        - {item.title}
+                                    </button>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
+                {activeIndex === 0 && <Part1 />}
+            </main>
+        </>
     );
 }
