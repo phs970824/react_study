@@ -1,21 +1,21 @@
-"use client";
-import { useContext, useReducer } from "react";
-import styles from "./components.module.scss";
-import { themeContext } from "../page";
+'use client';
+import { useContext, useReducer } from 'react';
+import styles from '@/styles/study1/components/components.module.scss';
+import { themeContext } from '../page';
 
 function reducer(state, action) {
     switch (action.type) {
-        case "change_name":
+        case 'change_name':
             return {
                 ...state,
                 name: action.nextName,
             };
-        case "increase_age":
+        case 'increase_age':
             return {
                 ...state,
                 age: state.age + 1,
             };
-        case "decrease_age":
+        case 'decrease_age':
             return {
                 ...state,
                 age: state.age - 1,
@@ -26,21 +26,21 @@ function reducer(state, action) {
 }
 
 const ReducerComponent = () => {
-    const initialState = { name: "heesoon", phone: "010-1234-5678" };
+    const initialState = { name: 'heesoon', phone: '010-1234-5678' };
     const [state, dispatch] = useReducer(reducer, initialState);
 
     const context = useContext(themeContext);
 
     function handleChangeName(e) {
         dispatch({
-            type: "change_name",
+            type: 'change_name',
             nextName: e.target.value,
         });
     }
 
     function handleChangePhone(e) {
         dispatch({
-            type: "change_phone",
+            type: 'change_phone',
             nextPhone: e.target.value,
         });
     }

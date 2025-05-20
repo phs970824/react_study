@@ -1,12 +1,12 @@
-"use client";
-import styles from "./page.module.scss";
-import { createContext } from "react";
+'use client';
+import styles from '@/styles/study1/page.module.scss';
+import { createContext } from 'react';
 
 //components
-import StateComponent from "./components/StateComponent";
-import ReducerComponent from "./components/ReducerComponent";
+import StateComponent from './components/StateComponent';
+import ReducerComponent from './components/ReducerComponent';
 
-export const themeContext = createContext<string>("light");
+export const themeContext = createContext<string>('light');
 const Part1 = () => {
     return (
         <themeContext.Provider value="nnnn">

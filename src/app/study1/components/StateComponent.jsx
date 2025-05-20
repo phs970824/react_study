@@ -1,6 +1,6 @@
-"use client";
-import React, { useState } from "react";
-import styles from "./components.module.scss";
+'use client';
+import React, { useState } from 'react';
+import styles from '@/styles/study1/components/components.module.scss';
 
 // 부모 컴포넌트
 const StateComponent = () => {
