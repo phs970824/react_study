@@ -1,12 +1,13 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState } from 'react';
 
 // components
-import Header from "./components/layout/header";
-import Part1 from "./components/part1/Part1";
+import Header from './components/layout/header';
+import Part1 from './components/part1/Part1';
+import Part2 from './components/part2/Part2';
 
 // styles
-import styles from "./page.module.scss";
+import styles from './page.module.scss';
 
 type dataType = {
     id: number;
@@ -14,12 +15,15 @@ type dataType = {
 };
 
 export default function Home() {
-    const data: dataType[] = [{ id: 0, title: "5/21 useRef" }];
+    const data: dataType[] = [
+        { id: 0, title: '5/21 useRef' },
+        { id: 1, title: '6/21 Context API' },
+    ];
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
         <>
-            <Header />
+            <Header onClick={() => setActiveIndex(null)} />
             <main className={styles.main}>
                 {activeIndex === null && (
                     <ul className={styles.list}>
@@ -35,6 +39,7 @@ export default function Home() {
                     </ul>
                 )}
                 {activeIndex === 0 && <Part1 />}
+                {activeIndex === 1 && <Part2 />}
             </main>
         </>
     );

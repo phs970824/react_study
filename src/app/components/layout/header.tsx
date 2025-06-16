@@ -1,9 +1,11 @@
-import styles from "@/styles/components/layout/header.module.scss";
+import styles from '@/styles/components/layout/header.module.scss';
 
-const Header = () => {
+const Header = ({ onClick }: { onClick: () => void }) => {
     return (
         <header className={styles.header}>
-            <h1>리액트 스터디</h1>
+            <button type="button" onClick={onClick}>
+                <h1>리액트 스터디</h1>
+            </button>
         </header>
     );
 };
