@@ -1,6 +1,8 @@
 // context API
 import { createContext, useContext, useRef, useState } from 'react';
 import styles from '@/styles/components/part2/part2.module.scss';
+import Image from 'next/image';
+import user from './user.jpg';
 
 // ----------context 생성-----------
 interface Common {
@@ -25,6 +27,8 @@ const Example1 = () => {
                 <h2>- useContext</h2>
 
                 <div className={styles.content}>
+                    <strong>회원정보</strong>
+
                     <Gender />
                     <Age />
                 </div>
@@ -39,8 +43,12 @@ const Gender = () => {
 
     return (
         <div className={styles.box}>
-            <p>성별: {gender}</p>
-            <button onClick={() => setGender(gender === '여자' ? '남자' : '여자')}>변경</button>
+            <Image src={user} alt="프로필" width={100} height={100} />
+            <p>홍길동</p>
+            <div className={styles.flex}>
+                <p>성별: {gender}</p>
+                <button onClick={() => setGender(gender === '여자' ? '남자' : '여자')}>변경</button>
+            </div>
         </div>
     );
 };
@@ -51,8 +59,8 @@ const Age = () => {
 
     return (
         <div className={styles.box}>
-            <p>나이: {age}</p>
-            <div>
+            <p>나이 : {age}</p>
+            <div className={styles.flex}>
                 <p>카운트 : {countRef.current}</p>
                 <button onClick={() => countRef.current++}>증가</button>
             </div>

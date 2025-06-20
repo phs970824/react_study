@@ -4,10 +4,12 @@ import Example2 from './Example2';
 
 const Part2 = () => {
     return (
-        <div className={styles.Wrap}>
-            <Example1 />
-            <Example2 />
-        </div>
+        <main className={styles.part2}>
+            <div className={styles.Wrap}>
+                <Example1 />
+                <Example2 />
+            </div>
+        </main>
     );
 };
 
