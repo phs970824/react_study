@@ -1,6 +1,6 @@
 // context API
 import { createContext, useContext, useRef, useState } from 'react';
-import styles from '@/styles/components/part2/part2.module.scss';
+import styles from '@/styles/study/part2/part2.module.scss';
 import Image from 'next/image';
 import user from './user.jpg';
 

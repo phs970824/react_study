@@ -1,4 +1,4 @@
-import styles from '@/styles/components/layout/header.module.scss';
+import styles from '@/styles/study/layout/header.module.scss';
 
 const Header = ({ onClick }: { onClick: () => void }) => {
     return (

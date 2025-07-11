@@ -1,4 +1,4 @@
-import styles from '@/styles/components/part2/part2.module.scss';
+import styles from '@/styles/study/part2/part2.module.scss';
 import Example1 from './Example1';
 import Example2 from './Example2';
 

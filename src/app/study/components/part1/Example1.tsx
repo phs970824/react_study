@@ -1,6 +1,6 @@
-"use client";
-import { useRef, useState } from "react";
-import styles from "@/styles/components/part1/part1.module.scss";
+'use client';
+import { useRef, useState } from 'react';
+import styles from '@/styles/study/part1/part1.module.scss';
 
 // useRef
 // 요소에 접근하여 조작
@@ -40,8 +40,7 @@ const Example1 = () => {
                 <div>
                     <button
                         type="button"
-                        onClick={() => alert(`일반 변수 : ${variable}, useRef 변수 : ${variableRef.current}`)}
-                    >
+                        onClick={() => alert(`일반 변수 : ${variable}, useRef 변수 : ${variableRef.current}`)}>
                         값 확인
                     </button>
                     <button type="button" onClick={() => setCount(count + 1)}>

@@ -1,5 +1,5 @@
-import styles from "@/styles/components/part1/part1.module.scss";
-import { forwardRef, useRef } from "react";
+import styles from '@/styles/study/part1/part1.module.scss';
+import { forwardRef, useRef } from 'react';
 
 const Example2 = () => {
     const inputRef = useRef<HTMLInputElement>(null);

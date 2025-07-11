@@ -1,5 +1,5 @@
-import styles from "@/styles/components/part1/part1.module.scss";
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import styles from '@/styles/study/part1/part1.module.scss';
+import { forwardRef, useImperativeHandle, useRef } from 'react';
 
 type ChildHandle = {
     focus: () => void;
@@ -29,7 +29,7 @@ const ChildComponent = forwardRef<ChildHandle>(function ChildComponent(_, ref) {
         return {
             focus: () => {
                 newInputRef.current?.focus();
-                alert("메서드 커스터마이징");
+                alert('메서드 커스터마이징');
             },
         };
     });

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
 // styles
-import styles from "@/styles/components/part1/part1.module.scss";
-import Example1 from "./Example1";
-import Example2 from "./Example2";
-import Example3 from "./Example3";
+import styles from '@/styles/study/part1/part1.module.scss';
+import Example1 from './Example1';
+import Example2 from './Example2';
+import Example3 from './Example3';
 
 const Part1 = () => {
     return (
