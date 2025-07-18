@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
     --background: #ffffff;
@@ -22,5 +22,36 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
 }
+
+button {
+    cursor: pointer;
+}
+
+// common
+body,
+html {
+    font-size: var(--base-font-size);
+    @media (min-width: 1281px) {
+        --base-font-size: 14px;
+    }
+    @media (min-width: 768px) and (max-width: 1280px) {
+        --base-font-size: 0.75vw;
+    }
+    @media (max-width: 767px) {
+        --base-font-size: 0.85vw;
+    }
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+// 브레이크포인트
+// 1280이상 > 1280 > 767 >

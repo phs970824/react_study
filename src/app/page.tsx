@@ -10,7 +10,7 @@ export default function Home() {
                     <a href="/study">study</a>
                 </li>
                 <li>
-                    <a href="/netflix">netflix</a>
+                    <a href="/netflix/browse">netflix</a>
                 </li>
             </ul>
         </div>
