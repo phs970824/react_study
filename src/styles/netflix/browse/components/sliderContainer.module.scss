@@ -1,0 +1,14 @@
+.sliderContainer {
+    width: 100%;
+}
+
+.sliderList {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+}
+
+.sliderItem {
+    width: 15.3vw;
+    aspect-ratio: 220/125;
+}

@@ -1,50 +1,15 @@
+'use client';
 import Image from 'next/image';
+// data
+import { heroCont, category } from '@/lib/api/netflix/mockData.json';
+
+// style
 import styles from '@/styles/netflix/browse/components/main.module.scss';
+import SliderContainer from './SliderContainer';
 
 const Main = () => {
-    const data = [
-        {
-            id: 0,
-            title: '타이틀1',
-            movie: [
-                {
-                    id: 0,
-                    title: '영화1',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 1,
-                    title: '영화2',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 2,
-                    title: '영화3',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 3,
-                    title: '영화4',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 4,
-                    title: '영화5',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 5,
-                    title: '영화6',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-                {
-                    id: 6,
-                    title: '영화7',
-                    poster: 'https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd98oKgCH9JvkO60g69tQa7G98g6iIPKJY3EeKrDoxx4fuJZJ22WuDyVEEGykc9mGgQZHFMUZeS5Jn3HdrQOD_AVxYYRCcpjBQQajXeIomJVTIkH9oUZhOAWe57dkaVZLQl1.jpg?r=c46',
-                },
-            ],
-        },
-    ];
+    const heroData = heroCont;
+    const sliderItemsData = category;
 
     return (
         <main>
@@ -52,17 +17,13 @@ const Main = () => {
                 <h2 className="blind">특별 소개 콘텐츠</h2>
                 <div className={styles.kv__inner}>
                     <div className={styles['i-box']}>
-                        {/* <Image src="/images/01_thumb.webp" alt="" width={1920} height={1080} /> */}
-                        <Image src="" alt="" width={1920} height={1080} />
-                        <span className={styles.layer}></span>
+                        <Image src={heroData.image} alt={heroData.title} width={1920} height={1080} />
+                        <span className={styles['layer-l']}></span>
+                        <span className={styles['layer-b']}></span>
                     </div>
                     <div className={styles['t-box']}>
-                        <Image src="/images/02_tit.webp" alt="" width={300} height={300} />
-                        <p>
-                            마침내 탄지로의 칼날이 모두 벼려졌다! 피에 굶주린 혈귀의 습격으로 가족을 잃고 여동생마저
-                            저주에 걸린 소년. 가혹한 운명의 사슬을 끊어내고 세상에서 혈귀를 멸하려, 지금 탄지로가 복수의
-                            칼날을 높이 든다.
-                        </p>
+                        <Image src={heroData.titleImage} alt={heroData.title} width={300} height={300} />
+                        <p>{heroData.description}</p>
                         <div className={styles['b-box']}>
                             <button type="button" className={styles.kv__play}>
                                 <svg
@@ -102,13 +63,12 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            {data.map((item) => {
-                return (
-                    <section className="sc-content" key={item.id}>
-                        <h2>{item.title}</h2>
-                    </section>
-                );
-            })}
+            <section className={styles.contents}>
+                <div className={styles.contents__inner}>
+                    <h2 className="blind">카테고리별 콘텐츠</h2>
+                    <SliderContainer data={sliderItemsData} />
+                </div>
+            </section>
         </main>
     );
 };

@@ -1,0 +1,51 @@
+{
+    "heroCont": {
+        "id": "0",
+        "title": "a",
+        "titleImage": "/images/02_tit2.webp",
+        "image": "/images/01_thumb.webp",
+        "video": "",
+        "videoPoster": "https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABS9BRLYGiWnYVlPoAsxc81D8UgqaMGsaetmKqrtAzATKDm3Kk6zJ17aBoGiffy_757uGQ9R1dkSZR2Ps0EwcYaikz6YFS-aaJ8sx.webp?r=cd6",
+        "description": "재야의 고수들과 명성 높은 스타 셰프들이 대한민국 요리 최강자 타이틀을 두고 맞붙는다. 대한민국 최고의 외식 경영인 백종원과 한국 유일의 미슐랭 3스타 셰프 안성재가 심사를 맡은 시리즈."
+    },
+    "category": {
+        "title": "카테고리 제목",
+        "items": [
+            {
+                "id": 0,
+                "title": "",
+                "thumbnail": "/images/item01.webp"
+            },
+            {
+                "id": 1,
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": 2,
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": 3,
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": 4,
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": 5,
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": 6,
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            }
+        ]
+    }
+}
