@@ -1,7 +1,3 @@
-.main {
-    background-color: var(--bg-color);
-    padding-bottom: 50px;
-}
 .kv {
     &__inner {
         position: relative;
@@ -21,7 +17,6 @@
     position: relative;
     img {
         width: 100%;
-
         background: #000;
         aspect-ratio: 16/9;
     }
@@ -64,6 +59,7 @@
         width: 100%;
         margin-bottom: 1.2vw;
         min-height: 13.2vw;
+        transform-origin: left bottom;
     }
 
     p {
@@ -74,6 +70,7 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
         word-break: keep-all;
         margin-bottom: 1.5vw;
+        transform-origin: left bottom;
     }
 }
 
@@ -97,11 +94,4 @@
         width: 2.4rem;
         height: 2.4rem;
     }
-}
-
-// sc-contents
-.contents {
-    position: relative;
-    color: #fff;
-    margin-top: -15vw;
 }

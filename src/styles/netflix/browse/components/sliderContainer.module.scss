@@ -20,8 +20,6 @@
 }
 
 .swiperSlide:global(.swiper-slide) {
-    width: 15.6vw;
-    min-width: 200px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -45,8 +43,9 @@
 .swiperBtnNext {
 }
 
-.swiperPagination:global(.swiper-pagination-horizontal.swiper-pagination-bullets) {
-    // 기존 pagination 컨테이너 스타일
+.swiperPagination:global(
+        .swiper-pagination-horizontal.swiper-pagination-bullets
+    ) {
     position: absolute;
     top: -30px;
     right: var(--inner);
@@ -55,7 +54,6 @@
     width: auto;
 }
 
-// Swiper pagination bullet 스타일
 .swiperPagination :global(.swiper-pagination-bullet) {
     background-color: #4d4d4d;
     display: inline-block;
@@ -66,7 +64,32 @@
     margin: 1px !important;
     opacity: 1;
 }
-.swiperPagination :global(.swiper-pagination-bullet.swiper-pagination-bullet-active) {
+.swiperPagination
+    :global(.swiper-pagination-bullet.swiper-pagination-bullet-active) {
     background-color: #aaa;
     transform: scale(1);
+}
+
+@media (max-width: 1280px) {
+    .swiperPagination:global(
+            .swiper-pagination-horizontal.swiper-pagination-bullets
+        ) {
+        top: -20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sliderContainer {
+        width: 100%;
+        margin: 2.5vw 0px;
+
+        h3 {
+            font-size: 12px;
+        }
+    }
+    .swiperPagination:global(
+            .swiper-pagination-horizontal.swiper-pagination-bullets
+        ) {
+        top: -12px;
+    }
 }
