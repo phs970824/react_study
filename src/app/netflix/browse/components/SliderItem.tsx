@@ -5,7 +5,9 @@ import Image from 'next/image';
 const SliderItem = ({ item }: { item: sliderItemType }) => {
     return (
         <div className="sliderItem">
-            <Image src={item.thumbnail} alt={item.title} width={1920} height={1080} />
+            <a href="">
+                <Image src={item.thumbnail} alt={item.title} width={1920} height={1080} />
+            </a>
         </div>
     );
 };

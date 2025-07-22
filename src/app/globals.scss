@@ -35,6 +35,7 @@ html {
     font-size: var(--base-font-size);
     --base-font-size: 14px;
     --inner: 60px;
+    --bg-color: #141414;
     @media (max-width: 1280px) {
         --base-font-size: 0.75vw;
         --inner: 4vw;
@@ -55,3 +56,24 @@ html {
 
 // 브레이크포인트
 // 1280이상 > 1280 > 767 >
+
+// Swiper pagination bullet 스타일
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.8);
+        transform: scale(1.2);
+    }
+
+    &.swiper-pagination-bullet-active {
+        background: #fff;
+        transform: scale(1.3);
+    }
+}

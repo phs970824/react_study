@@ -1,3 +1,6 @@
+.main {
+    background-color: var(--bg-color);
+}
 .kv {
     &__inner {
         position: relative;
@@ -96,7 +99,7 @@
 }
 
 .contents {
-    &__inner {
-        padding: 0 var(--inner);
-    }
+    position: relative;
+    color: #fff;
+    margin-top: -15vw;
 }

@@ -1,14 +1,72 @@
 .sliderContainer {
     width: 100%;
+    margin: 2.5vw 0px;
+
+    h3 {
+        color: #e5e5e5;
+        font-size: 1.4vw;
+        font-weight: 500;
+        margin-left: var(--inner);
+        margin-bottom: 0.5em;
+    }
 }
 
-.sliderList {
-    display: flex;
-    gap: 10px;
-    width: max-content;
+.swiperContainer {
+    position: relative;
+}
+
+.sliderList:global(.swiper) {
+    padding: 0 var(--inner);
+}
+
+.swiperSlide:global(.swiper-slide) {
+    width: 15.6vw;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .sliderItem {
     width: 15.3vw;
     aspect-ratio: 220/125;
+}
+
+.swiperBtnPrev {
+    position: absolute;
+    top: 50%;
+    right: var(--inner);
+    transform: translateY(-50%);
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.swiperBtnNext {
+}
+
+.swiperPagination:global(.swiper-pagination-horizontal.swiper-pagination-bullets) {
+    // 기존 pagination 컨테이너 스타일
+    position: absolute;
+    top: -30px;
+    right: var(--inner);
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+
+// Swiper pagination bullet 스타일
+.swiperPagination :global(.swiper-pagination-bullet) {
+    background-color: #4d4d4d;
+    display: inline-block;
+    height: 2px;
+    margin-left: 1px;
+    width: 12px;
+    border-radius: 0px;
+    margin: 1px !important;
+    opacity: 1;
+}
+.swiperPagination :global(.swiper-pagination-bullet.swiper-pagination-bullet-active) {
+    background-color: #aaa;
+    transform: scale(1);
 }

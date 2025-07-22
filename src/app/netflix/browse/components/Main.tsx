@@ -12,7 +12,7 @@ const Main = () => {
     const sliderItemsData = category;
 
     return (
-        <main>
+        <main className={styles.main}>
             <section className={styles.kv}>
                 <h2 className="blind">특별 소개 콘텐츠</h2>
                 <div className={styles.kv__inner}>
@@ -66,6 +66,8 @@ const Main = () => {
             <section className={styles.contents}>
                 <div className={styles.contents__inner}>
                     <h2 className="blind">카테고리별 콘텐츠</h2>
+                    <SliderContainer data={sliderItemsData} />
+                    <SliderContainer data={sliderItemsData} />
                     <SliderContainer data={sliderItemsData} />
                 </div>
             </section>
