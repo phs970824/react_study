@@ -8,8 +8,9 @@
         "videoPoster": "https://occ-0-3076-988.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABS9BRLYGiWnYVlPoAsxc81D8UgqaMGsaetmKqrtAzATKDm3Kk6zJ17aBoGiffy_757uGQ9R1dkSZR2Ps0EwcYaikz6YFS-aaJ8sx.webp?r=cd6",
         "description": "교양 있고 우아한 피아니스트와 산전수전 다 겪은 운전기사. 인종 차별이 만연한 남부 지역으로 콘서트 투어를 떠난 두 사람 사이에 어느새 인종을 뛰어넘는 우정이 싹튼다."
     },
-    "category": {
-        "title": "카테고리 제목",
+    "category1": {
+        "id": "0",
+        "title": "카테고리 제목1",
         "items": [
             {
                 "id": 0,
@@ -62,5 +63,129 @@
                 "thumbnail": "/images/item03.jpg"
             }
         ]
+    },
+    "category2": {
+        "id": "0",
+        "title": "카테고리 제목2",
+        "items": [
+            {
+                "id": 0,
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": 1,
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": 2,
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": 3,
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": 4,
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": 5,
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": 6,
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": 7,
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": 8,
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": 9,
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            }
+        ]
+    },
+    "category3": {
+        "id": "0",
+        "title": "카테고리 제목3",
+        "items": [
+            {
+                "id": 0,
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": 1,
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": 2,
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": 3,
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": 4,
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": 5,
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": 6,
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": 7,
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": 8,
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": 9,
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            }
+        ]
+    },
+    "itemData": {
+        "id": 0,
+        "title": "Fight Club",
+        "thumbnail": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        "keywords": ["키워드1", "키워드2", "키워드3"],
+        "adult": "false",
+        "feleaseDate": "2025-01-01",
+        "country": "한국",
+        "genre": "드라마",
+        "overview": "설명",
+        "videoKey": "O-b2VfmmbyA"
     }
 }

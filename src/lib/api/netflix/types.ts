@@ -15,6 +15,7 @@ export type sliderItemType = {
 };
 
 export type categoryType = {
+    id: string;
     title: string;
     items: sliderItemType[];
 };
