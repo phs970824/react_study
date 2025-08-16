@@ -8,8 +8,8 @@ export type heroContType = {
     description: string;
 };
 
-export type sliderItemType = {
-    id: number;
+export type cardItemType = {
+    id: string;
     title: string;
     thumbnail: string;
 };
@@ -17,5 +17,5 @@ export type sliderItemType = {
 export type categoryType = {
     id: string;
     title: string;
-    items: sliderItemType[];
+    items: cardItemType[];
 };

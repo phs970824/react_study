@@ -1,0 +1,116 @@
+.card-list {
+    position: relative;
+    width: 100%;
+    margin: 2.5vw 0px;
+
+    h3 {
+        color: #e5e5e5;
+        font-size: 1.4vw;
+        font-weight: 500;
+        margin-left: var(--inner);
+        margin-bottom: 0.5em;
+        position: relative;
+        z-index: 0;
+    }
+    &:hover {
+        .btn-wrap button {
+            opacity: 1;
+        }
+    }
+}
+
+.contents {
+    position: relative;
+}
+
+.slider-wrap {
+    padding: 0 var(--inner);
+    overflow-x: visible;
+    white-space: nowrap;
+    touch-action: pan-y;
+}
+
+.slider-item {
+    position: relative;
+    width: 16.7%;
+    display: inline-block;
+    padding: 0 0.2vw;
+    img {
+        border-radius: 0.2vw;
+    }
+}
+
+// -------------------------------
+.btn-prev,
+.btn-next {
+    position: absolute;
+    top: 0;
+    width: var(--inner);
+    height: 100%;
+    border-radius: 0.2vw;
+    button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.2vw;
+        height: 1.2vw;
+        cursor: pointer;
+        border-left: 0.4em solid #fff;
+        border-top: 0.4em solid #fff;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        z-index: 1;
+    }
+}
+.btn-prev button {
+    transform: translate(-20%, -50%) rotate(-45deg);
+}
+.btn-next {
+    right: 0;
+    button {
+        transform: translate(-70%, -50%) rotate(135deg);
+    }
+}
+
+.pagination-wrap {
+    position: absolute;
+    top: 1rem;
+    right: var(--inner);
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+
+.pagination {
+    background-color: #4d4d4d;
+    display: inline-block;
+    height: 2px;
+    margin-left: 1px;
+    width: 12px;
+    border-radius: 0px;
+    margin: 1px !important;
+    opacity: 1;
+}
+.active {
+    background-color: #aaa;
+}
+
+@media (max-width: 1280px) {
+    .pagination-wrap {
+        top: -20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sliderContainer {
+        width: 100%;
+        margin: 2.5vw 0px;
+
+        h3 {
+            font-size: 12px;
+        }
+    }
+    .pagination-wrap {
+        top: -12px;
+    }
+}

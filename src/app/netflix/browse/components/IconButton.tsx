@@ -1,16 +1,35 @@
-import styles from '@/styles/netflix/browse/components/iconButton.module.scss';
+import styles from "@/styles/netflix/browse/components/iconButton.module.scss";
+import Link from "next/link";
+
+interface IconButtonProps {
+    icon: React.ReactNode;
+    className?: string;
+    alt?: string;
+    onClick?: () => void;
+    tag?: "button" | "link";
+    href?: {
+        pathname: string;
+        query: {
+            id: string;
+        };
+    };
+    scroll?: boolean;
+}
 
 const IconButton = ({
     icon,
     className,
     alt,
     onClick,
-}: {
-    icon: React.ReactNode;
-    className?: string;
-    alt?: string;
-    onClick?: () => void;
-}) => {
+    tag = "button",
+    href = {
+        pathname: "",
+        query: {
+            id: "",
+        },
+    },
+    scroll = false,
+}: IconButtonProps) => {
     const defaultIcon = (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,17 +39,42 @@ const IconButton = ({
             width="24"
             height="24"
             data-icon="PlusStandard"
-            aria-hidden="true">
-            <path fillRule="evenodd" clip-rule="evenodd" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" fill="currentColor"></path>
+            aria-hidden="true"
+        >
+            <path
+                fillRule="evenodd"
+                clip-rule="evenodd"
+                d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z"
+                fill="currentColor"
+            ></path>
         </svg>
     );
 
     const iconContent = icon || defaultIcon;
+
+    if (tag === "button") {
+        return (
+            <button
+                type="button"
+                className={`${styles.iconButton} ${className}`}
+                onClick={onClick}
+            >
+                {iconContent}
+                {alt && <span className="blind">{alt}</span>}
+            </button>
+        );
+    }
+
+    // link(a태그) 일 때
     return (
-        <button type="button" className={`${styles.iconButton} ${className}`} onClick={onClick}>
+        <Link
+            href={href}
+            className={`${styles.iconButton} ${className}`}
+            scroll={scroll}
+        >
             {iconContent}
             {alt && <span className="blind">{alt}</span>}
-        </button>
+        </Link>
     );
 };
 
