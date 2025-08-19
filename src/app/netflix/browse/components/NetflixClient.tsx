@@ -15,9 +15,6 @@ const NetflixClient = () => {
     const searchParams = useSearchParams();
     const selecteId = searchParams.get('id');
 
-    const [data, setData] = useState([]);
-    // console.log(data);
-
     // useEffect(() => {
     //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
     //         method: 'GET',

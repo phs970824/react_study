@@ -28,7 +28,6 @@ const IconButton = ({
             id: '',
         },
     },
-    scroll = false,
 }: IconButtonProps) => {
     const defaultIcon = (
         <svg
