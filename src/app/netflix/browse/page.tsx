@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import { AnimatePresence } from 'motion/react';
 import DetailModal from './components/DetailModal';
 import { useSearchParams } from 'next/navigation';
+import { ModalProvider } from './components/ModalContext';
+import { GlobalModal } from './components/SimpleModal';
 
 interface NetflixProps {
     searchParams: {
@@ -17,7 +19,6 @@ const Netflix = () => {
     const searchParams = useSearchParams();
     const selecteId = searchParams.get('id');
 
-    console.log(selecteId);
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -37,15 +38,18 @@ const Netflix = () => {
 
     return (
         <>
-            <Header />
-            <Main />
-            <Footer />
+            <ModalProvider>
+                <Header />
+                <Main />
+                <Footer />
+                <GlobalModal />
 
-            <AnimatePresence>{selecteId && <DetailModal id={selecteId} key="modal" />}</AnimatePresence>
-            {/* key="modal" 을 사용하는 이유 :
+                <AnimatePresence>{selecteId && <DetailModal id={selecteId} key="modal" />}</AnimatePresence>
+                {/* key="modal" 을 사용하는 이유 :
             모달이 DOM에서 즉시 제거되지 않고, exit 애니메이션이 끝날 때까지 기다림
             어떤 컴포넌트가 사라져야 하는지 React가 판단하기 위해 key값 필요
             key값이 없으면 모달이 즉시 DOM에서 제거되어 Framer Motion의 exit 애니메이션이 실행될 기회가 없어짐. */}
+            </ModalProvider>
         </>
     );
 };
