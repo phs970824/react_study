@@ -13,7 +13,6 @@ interface IconTextButtonProps {
             id: string;
         };
     };
-    scroll?: boolean;
     onClick?: () => void;
 }
 
@@ -24,7 +23,6 @@ const IconTextButton = ({
     onClick,
     tag = 'button',
     href = { pathname: '', query: { id: '' } },
-    scroll = false,
 }: IconTextButtonProps) => {
     if (tag === 'button') {
         return (
