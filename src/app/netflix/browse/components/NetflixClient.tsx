@@ -1,18 +1,21 @@
-'use client';
+"use client";
 
-import { AnimatePresence } from 'motion/react';
-import Footer from './Footer';
-import Header from './Header';
-import Main from './Main';
-import { ModalProvider } from './ModalContext';
-import { GlobalModal } from './SimpleModal';
-import DetailModal from './DetailModal';
-import { useSearchParams } from 'next/navigation';
-import styles from '@/styles/netflix/browse/components/netflixClient.module.scss';
+import { AnimatePresence } from "motion/react";
+import Footer from "./Footer";
+import Header from "./Header";
+import Main from "./Main";
+import { ModalProvider } from "./ModalContext";
+import { GlobalModal } from "./SimpleModal";
+import DetailModal from "./DetailModal";
+import { useSearchParams } from "next/navigation";
+import styles from "@/styles/netflix/browse/components/netflixClient.module.scss";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+export const queryClient = new QueryClient();
 
 const NetflixClient = () => {
     const searchParams = useSearchParams();
-    const selecteId = searchParams.get('id');
+    const selecteId = searchParams.get("id");
 
     // useEffect(() => {
     //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
@@ -30,20 +33,24 @@ const NetflixClient = () => {
     // }, []);
 
     return (
-        <ModalProvider>
-            <div id="wrap" className={selecteId ? styles.fixed : ''}>
-                <Header />
-                <Main />
-                <Footer />
-            </div>
-            <GlobalModal />
+        <QueryClientProvider client={queryClient}>
+            <ModalProvider>
+                <div id="wrap" className={selecteId ? styles.fixed : ""}>
+                    <Header />
+                    <Main />
+                    <Footer />
+                </div>
+                <GlobalModal />
 
-            <AnimatePresence>{selecteId && <DetailModal id={selecteId} key="modal" />}</AnimatePresence>
-            {/* key="modal" 을 사용하는 이유 :
+                <AnimatePresence>
+                    {selecteId && <DetailModal id={selecteId} key="modal" />}
+                </AnimatePresence>
+                {/* key="modal" 을 사용하는 이유 :
             모달이 DOM에서 즉시 제거되지 않고, exit 애니메이션이 끝날 때까지 기다림
             어떤 컴포넌트가 사라져야 하는지 React가 판단하기 위해 key값 필요
             key값이 없으면 모달이 즉시 DOM에서 제거되어 Framer Motion의 exit 애니메이션이 실행될 기회가 없어짐. */}
-        </ModalProvider>
+            </ModalProvider>
+        </QueryClientProvider>
     );
 };
 

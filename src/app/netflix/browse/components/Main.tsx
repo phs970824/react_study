@@ -1,34 +1,77 @@
-'use client';
+"use client";
 // data
-import mockData from '@/lib/api/netflix/mockData.json';
+import mockData from "@/lib/api/netflix/mockData.json";
 
 // component
-import HeroSection from './HeroSection';
-import CardList from './CardList';
+import HeroSection from "./HeroSection";
+import CardList from "./CardList";
 
 // style
-import styles from '@/styles/netflix/browse/components/main.module.scss';
-import { useRef } from 'react';
+import styles from "@/styles/netflix/browse/components/main.module.scss";
+import { useEffect, useRef } from "react";
+import { cardListData } from "./cardListData";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { categoryType } from "@/lib/api/netflix/types";
+import cardListMock from "@/lib/api/netflix/cardListMock.json";
 
 const Main = () => {
     const heroData = mockData.heroCont;
-    const ovserverRef = useRef<HTMLDivElement | null>(null);
+    const observerRef = useRef<HTMLDivElement | null>(null);
+    const settingData = [
+        cardListMock.category1,
+        cardListMock.category2,
+        cardListMock.category3,
+    ];
 
-    // api 연결 전 임시 사용되는 mock 데이터
+    const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
+        useInfiniteQuery({
+            queryKey: ["cardListMock"],
+            queryFn: ({ pageParam }) => cardListData(pageParam),
+            initialPageParam: 4,
+            getNextPageParam: (lastPage, allPages) =>
+                allPages.length <= 7 ? allPages.length + 1 : undefined,
+        });
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            if (
+                entries[0].isIntersecting &&
+                hasNextPage &&
+                !isFetchingNextPage
+            ) {
+                fetchNextPage();
+            }
+        });
+
+        const currentRef = observerRef.current;
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
+    }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+
+    const page = data?.pages.flat() as categoryType[];
 
     return (
-        <main className={styles.main} ref={ovserverRef} style={{ overflow: 'hidden' }}>
+        <main className={styles.main}>
             <HeroSection heroData={heroData} />
             <section className={styles.contents}>
                 <h2 className="blind">카테고리별 콘텐츠</h2>
-                {/* {contents.map((item, index) => {
+                {settingData.map((item: categoryType, index: number) => {
                     return <CardList key={index} data={item} />;
-                })} */}
-                <CardList data={mockData.category1} />
-                <CardList data={mockData.category2} />
-                <CardList data={mockData.category3} />
+                })}
+                {page?.map((item: categoryType, index: number) => {
+                    return <CardList key={index} data={item} />;
+                })}
             </section>
-            <span></span>
+            {data && hasNextPage && !isFetchingNextPage && (
+                <span ref={observerRef}></span>
+            )}
         </main>
     );
 };

@@ -1,0 +1,674 @@
+{
+    "category1": {
+        "id": "0",
+        "title": "카테고리 제목1",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category2": {
+        "id": "1",
+        "title": "카테고리 제목2",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category3": {
+        "id": "3",
+        "title": "카테고리 제목3",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category4": {
+        "id": "4",
+        "title": "카테고리 제목4",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category5": {
+        "id": "5",
+        "title": "카테고리 제목5",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category6": {
+        "id": "6",
+        "title": "카테고리 제목6",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    },
+    "category7": {
+        "id": "7",
+        "title": "카테고리 제목7",
+        "items": [
+            {
+                "id": "0",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "1",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "2",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "3",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "4",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "5",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "6",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "7",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "8",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "9",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "10",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            },
+            {
+                "id": "11",
+                "title": "",
+                "thumbnail": "/images/item05.webp"
+            },
+            {
+                "id": "12",
+                "title": "",
+                "thumbnail": "/images/item06.webp"
+            },
+            {
+                "id": "13",
+                "title": "",
+                "thumbnail": "/images/item07.webp"
+            },
+            {
+                "id": "14",
+                "title": "",
+                "thumbnail": "/images/item01.jpg"
+            },
+            {
+                "id": "15",
+                "title": "",
+                "thumbnail": "/images/item02.webp"
+            },
+            {
+                "id": "16",
+                "title": "",
+                "thumbnail": "/images/item03.jpg"
+            },
+            {
+                "id": "17",
+                "title": "",
+                "thumbnail": "/images/item04.webp"
+            }
+        ]
+    }
+}
