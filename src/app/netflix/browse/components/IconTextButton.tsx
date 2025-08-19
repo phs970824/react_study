@@ -10,7 +10,7 @@ interface IconTextButtonProps {
 
 const IconTextButton = ({ text, className, icon, onClick }: IconTextButtonProps) => {
     return (
-        <button type="button" className={`${styles.iconTextButton} ${className}`}>
+        <button type="button" className={`${styles.iconTextButton} ${className}`} onClick={onClick}>
             {icon && icon}
             {text}
         </button>

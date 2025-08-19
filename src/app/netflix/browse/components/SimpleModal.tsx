@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import styles from '@/styles/netflix/browse/components/simpleModal.module.scss';
 
 // components

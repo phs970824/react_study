@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const DetailModal = ({ id }: { id: string }) => {
+    console.log(id);
     // 필요한 데이터
     // 제목, 장르, 출연배우, 영화 특징(키워드), 예고편, 19세여부, 줄거리, 관련 콘텐츠, 이외 가능한 상세정보(맨하단)
 
@@ -209,7 +210,7 @@ const DetailModal = ({ id }: { id: string }) => {
                             <span>영화 특징:</span>
                             <span>
                                 {data.keyword.map((keyword) => {
-                                    return <span>{keyword}</span>;
+                                    return <span key={keyword}>{keyword}</span>;
                                 })}
                             </span>
                         </p>

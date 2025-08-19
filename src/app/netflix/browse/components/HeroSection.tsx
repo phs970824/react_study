@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 // style
 import styles from '@/styles/netflix/browse/components/heroSection.module.scss';
 import IconButton from './IconTextButton';
-import YouTubeEmbed from './YoutubeEmbed';
 
 const HeroSection = ({ heroData }: { heroData: heroContType }) => {
     const titleImageRef = useRef<HTMLImageElement>(null);
@@ -115,7 +114,6 @@ const HeroSection = ({ heroData }: { heroData: heroContType }) => {
                         />
                     </div>
                 </div>
-                {/* <YouTubeEmbed embedId="dQw4w9WgXcQ" /> */}
             </div>
         </section>
     );

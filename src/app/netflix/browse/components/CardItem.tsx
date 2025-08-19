@@ -22,7 +22,9 @@ const CardItem = ({ item, className, isFirst = false, isLast = false }: CardItem
     const { openModal } = useModal();
 
     const handleMouseEnter = () => {
-        hoverTimer && clearTimeout(hoverTimer);
+        if (hoverTimer) {
+            clearTimeout(hoverTimer);
+        }
 
         const timerId = setTimeout(() => {
             if (cardItemRef.current) {
@@ -43,12 +45,16 @@ const CardItem = ({ item, className, isFirst = false, isLast = false }: CardItem
     };
 
     const handleMouseLeave = () => {
-        hoverTimer && clearTimeout(hoverTimer);
+        if (hoverTimer) {
+            clearTimeout(hoverTimer);
+        }
     };
     useEffect(() => {
         return () => {
             // 타이머 정리
-            hoverTimer && clearTimeout(hoverTimer);
+            if (hoverTimer) {
+                clearTimeout(hoverTimer);
+            }
         };
     }, [hoverTimer]);
 
