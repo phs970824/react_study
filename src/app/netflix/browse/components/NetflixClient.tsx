@@ -7,7 +7,6 @@ import Main from './Main';
 import { ModalProvider } from './ModalContext';
 import { GlobalModal } from './SimpleModal';
 import DetailModal from './DetailModal';
-import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styles from '@/styles/netflix/browse/components/netflixClient.module.scss';
 

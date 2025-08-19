@@ -13,7 +13,6 @@ interface IconButtonProps {
             id: string;
         };
     };
-    scroll?: boolean;
 }
 
 const IconButton = ({
