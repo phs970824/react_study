@@ -57,8 +57,21 @@ const HeroSection = ({ heroData }: { heroData: heroContType }) => {
                     <span className={styles['layer-b']}></span>
                 </div>
                 <div className={styles['t-box']}>
-                    <Image src={heroData.titleImage} alt={heroData.title} width={612} height={260} ref={titleImageRef} />
-                    <p ref={descRef}>{heroData.description}</p>
+                    <motion.div
+                        initial={{ scale: 1 }}
+                        animate={{ scale: 0.7 }}
+                        transition={{ delay: 1.8, duration: 1 }}
+                        style={{ transformOrigin: 'left bottom' }}>
+                        <Image src={heroData.titleImage} alt={heroData.title} width={612} height={260} ref={titleImageRef} />
+                    </motion.div>
+                    <motion.p
+                        ref={descRef}
+                        initial={{ scale: 1 }}
+                        animate={{ scale: 0 }}
+                        transition={{ delay: 1.8, duration: 1 }}
+                        style={{ transformOrigin: 'left bottom' }}>
+                        {heroData.description}
+                    </motion.p>
                     <div className={styles['b-box']}>
                         <IconButton
                             text="재생"

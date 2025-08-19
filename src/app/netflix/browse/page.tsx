@@ -9,12 +9,6 @@ import { useSearchParams } from 'next/navigation';
 import { ModalProvider } from './components/ModalContext';
 import { GlobalModal } from './components/SimpleModal';
 
-interface NetflixProps {
-    searchParams: {
-        id?: string;
-    };
-}
-
 const Netflix = () => {
     const searchParams = useSearchParams();
     const selecteId = searchParams.get('id');
