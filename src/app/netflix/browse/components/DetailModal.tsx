@@ -1,3 +1,4 @@
+import mockData from '@/lib/api/netflix/mockData.json';
 import styles from '@/styles/netflix/browse/components/detailModal.module.scss';
 import IconTextButton from './IconTextButton';
 import IconButton from './IconButton';
@@ -18,13 +19,11 @@ const DetailModal = ({ id }: { id: string }) => {
 
     const data = {
         title: '벤데타',
-        titleImg:
-            'https://occ-0-2794-988.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABTuuHFxUlDDDtW6jSuYTr3KVBMNy1PC9-4VrfK5KRlU9k8N9l8UVBb03-dbmlkYITrkCyLwwfQCIiXurN5w15-CVjM7fI4AZEwmF19bNrrU.webp?r=ef0',
+        titleImg: mockData.heroCont.titleImage,
         genre: '힐링, 로맨틱',
         actor: ['알레산드로 가스만', '지네브라 프란체스코니', '레모 지로네', '알레시오 프라티코', '프란체스코 빌라노'],
         keyword: ['키워드1', '키워드2', '키워드3'],
-        thumbnail:
-            'https://occ-0-2794-988.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABblbGfkLFXGwaFM2QSUPJN6rWVI51o01w-EuNE20qOaB8MKdyfgYdW2OwxvrW0ZWmujPjeJdzbDTMgYM2p-N1Ce5RZLUn2jSnZLs.webp?r=9a3',
+        thumbnail: mockData.heroCont.image,
         videoURL: '테스트 예고편',
         age: false,
         time: '1시간 40분',
@@ -62,11 +61,15 @@ const DetailModal = ({ id }: { id: string }) => {
 
                 <section className={styles.kv}>
                     <div className={styles['kv__thumb']}>
-                        <Image src={data.thumbnail} alt="" style={{ objectFit: 'cover' }} />
+                        <Image src={data.thumbnail} alt="" width={1920} height={1080} style={{ objectFit: 'cover' }} />
                     </div>
                     <div className={styles['kv__info-box']}>
                         <div className={styles['kv__title']}>
-                            {data.titleImg ? <Image src={data.titleImg} alt={data.title} /> : <h2>{data.title}</h2>}
+                            {data.titleImg ? (
+                                <Image src={data.titleImg} alt={data.title} width={612} height={260} />
+                            ) : (
+                                <h2>{data.title}</h2>
+                            )}
                         </div>
                         <div className={styles['kv__b-box']}>
                             <IconTextButton

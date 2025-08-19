@@ -91,6 +91,7 @@ const HeroSection = ({ heroData }: { heroData: heroContType }) => {
                                 </svg>
                             }
                         />
+
                         <IconButton
                             text="상세 정보"
                             className={styles.kv__more}
@@ -111,6 +112,12 @@ const HeroSection = ({ heroData }: { heroData: heroContType }) => {
                                         fill="currentColor"></path>
                                 </svg>
                             }
+                            tag="link"
+                            href={{
+                                pathname: '/netflix/browse',
+                                query: { id: heroData.id },
+                            }}
+                            scroll={false}
                         />
                     </div>
                 </div>

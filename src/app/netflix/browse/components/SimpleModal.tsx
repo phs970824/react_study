@@ -14,7 +14,7 @@ const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: 
     return (
         <div className={`${styles.simpleModalWrap} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''}`}>
             <div className={styles['i-box']}>
-                <Image src={data.thumbnail} alt={data.title} />
+                <Image src={data.thumbnail} alt={data.title} width={1920} height={1080} />
             </div>
             <Link
                 href={{

@@ -17,20 +17,20 @@ const NetflixClient = () => {
     const [data, setData] = useState([]);
     console.log(data);
 
-    useEffect(() => {
-        fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
-            method: 'GET',
-            headers: {
-                Authorization:
-                    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNDY2MzkwZTMzZTIzMzI1MTdjOTI1MTNjYjExYzlhMiIsIm5iZiI6MTc1MjE5OTUxNC42MDQsInN1YiI6IjY4NzA3MTVhNGFiY2NhNmNlMWJhMjhjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TuMj__34J1sinK7IgcZYR-u55kgPimTRMTu-gtYoJMM',
-                accept: 'application/json',
-            },
-        })
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => setData(data.results));
-    }, []);
+    // useEffect(() => {
+    //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
+    //         method: 'GET',
+    //         headers: {
+    //             Authorization:
+    //                 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNDY2MzkwZTMzZTIzMzI1MTdjOTI1MTNjYjExYzlhMiIsIm5iZiI6MTc1MjE5OTUxNC42MDQsInN1YiI6IjY4NzA3MTVhNGFiY2NhNmNlMWJhMjhjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TuMj__34J1sinK7IgcZYR-u55kgPimTRMTu-gtYoJMM',
+    //             accept: 'application/json',
+    //         },
+    //     })
+    //         .then((res) => {
+    //             return res.json();
+    //         })
+    //         .then((data) => setData(data.results));
+    // }, []);
 
     return (
         <ModalProvider>
