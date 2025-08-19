@@ -64,12 +64,9 @@ const CardItem = ({ item, className, isFirst = false, isLast = false }: CardItem
                 href={{
                     pathname: '/netflix/browse',
                     query: { id: item.id },
-                }}
-                scroll={false}>
+                }}>
                 <Image src={item.thumbnail} alt={item.title} width={1920} height={1080} />
             </Link>
-
-            {/* {simpleModalOpen && <SimpleModal data={item} isFirst={isFirst} isLast={isLast} />} */}
         </div>
     );
 };

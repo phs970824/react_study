@@ -1,0 +1,47 @@
+.title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    li {
+        border-radius: 0.25em;
+        overflow: hidden;
+    }
+}
+
+.i-box {
+}
+
+.t-box {
+    padding: 1em;
+    color: #bcbcbc;
+    background: #2f2f2f;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+    height: 5em;
+    > svg {
+        height: 70%;
+        max-height: 2.5em;
+    }
+
+    &-right {
+        margin-top: 1em;
+        margin-left: auto;
+    }
+}
+
+.story {
+}

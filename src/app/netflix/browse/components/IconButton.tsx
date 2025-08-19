@@ -1,12 +1,12 @@
-import styles from "@/styles/netflix/browse/components/iconButton.module.scss";
-import Link from "next/link";
+import styles from '@/styles/netflix/browse/components/iconButton.module.scss';
+import Link from 'next/link';
 
 interface IconButtonProps {
     icon: React.ReactNode;
     className?: string;
     alt?: string;
     onClick?: () => void;
-    tag?: "button" | "link";
+    tag?: 'button' | 'link';
     href?: {
         pathname: string;
         query: {
@@ -21,11 +21,11 @@ const IconButton = ({
     className,
     alt,
     onClick,
-    tag = "button",
+    tag = 'button',
     href = {
-        pathname: "",
+        pathname: '',
         query: {
-            id: "",
+            id: '',
         },
     },
     scroll = false,
@@ -39,26 +39,16 @@ const IconButton = ({
             width="24"
             height="24"
             data-icon="PlusStandard"
-            aria-hidden="true"
-        >
-            <path
-                fillRule="evenodd"
-                clip-rule="evenodd"
-                d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z"
-                fill="currentColor"
-            ></path>
+            aria-hidden="true">
+            <path fillRule="evenodd" clip-rule="evenodd" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" fill="currentColor"></path>
         </svg>
     );
 
     const iconContent = icon || defaultIcon;
 
-    if (tag === "button") {
+    if (tag === 'button') {
         return (
-            <button
-                type="button"
-                className={`${styles.iconButton} ${className}`}
-                onClick={onClick}
-            >
+            <button type="button" className={`${styles.iconButton} ${className}`} onClick={onClick}>
                 {iconContent}
                 {alt && <span className="blind">{alt}</span>}
             </button>
@@ -67,11 +57,7 @@ const IconButton = ({
 
     // link(a태그) 일 때
     return (
-        <Link
-            href={href}
-            className={`${styles.iconButton} ${className}`}
-            scroll={scroll}
-        >
+        <Link href={href} className={`${styles.iconButton} ${className}`}>
             {iconContent}
             {alt && <span className="blind">{alt}</span>}
         </Link>

@@ -117,7 +117,6 @@ const HeroSection = ({ heroData }: { heroData: heroContType }) => {
                                 pathname: '/netflix/browse',
                                 query: { id: heroData.id },
                             }}
-                            scroll={false}
                         />
                     </div>
                 </div>

@@ -1,16 +1,18 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from '@/styles/netflix/browse/components/simpleModal.module.scss';
 
 // components
 import { cardItemType } from '@/lib/api/netflix/types';
-import IconButton from './IconButton';
-import Link from 'next/link';
 import { useModal } from './ModalContext';
-import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
+import IconButton from './IconButton';
 
 const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: boolean; isLast?: boolean }) => {
+    const isAdult = false;
+
     return (
         <div className={`${styles.simpleModalWrap} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''}`}>
             <div className={styles['i-box']}>
@@ -21,7 +23,6 @@ const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: 
                     pathname: '/netflix/browse',
                     query: { id: data.id },
                 }}
-                scroll={false}
                 className={styles['t-wrap']}>
                 <div className={`${styles.flex} ${styles['btn-box']}`}>
                     <IconButton
@@ -105,7 +106,7 @@ const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: 
                     </div>
                 </div>
                 <div className={`${styles.flex} ${styles['info-box']}`}>
-                    {/* {isAdult ? (
+                    {isAdult ? (
                         <span>
                             <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
                                 <path
@@ -132,7 +133,7 @@ const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: 
                                     d="M36.92 15.484v68.647H21.553V34.62h-5.48l7.097-19.136h13.75zm44.288 0c.848 0 1.535.687 1.535 1.533v18.144c0 1.018-.044 1.885-.133 2.605a8.067 8.067 0 01-.493 1.975 14.48 14.48 0 01-.9 1.843c-.362.631-.84 1.363-1.44 2.204L60.643 70.653h21.923v13.394H41.59v-10.07l26.152-37.29V28.42H57.136v9.345H42.127V17.017c0-.846.687-1.533 1.534-1.533z"></path>
                             </svg>
                         </span>
-                    )} */}
+                    )}
                     <p>에피소드 9개</p>
                     <p className={styles.hd}>HD</p>
                 </div>

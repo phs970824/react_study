@@ -28,7 +28,6 @@ const CardList = ({ data }: { data: categoryType }) => {
         const observer = new ResizeObserver((entries) => {
             if (entries[0]) {
                 setItemWidth(entries[0].contentRect.width);
-                console.log(entries[0].contentRect.width);
             }
         });
 

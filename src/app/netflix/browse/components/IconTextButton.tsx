@@ -37,7 +37,7 @@ const IconTextButton = ({
 
     // link(a태그) 일 때
     return (
-        <Link href={href} className={`${styles.iconTextButton} ${className}`} scroll={scroll}>
+        <Link href={href} className={`${styles.iconTextButton} ${className}`}>
             {icon && icon}
             {text}
         </Link>

@@ -7,15 +7,16 @@ import Main from './Main';
 import { ModalProvider } from './ModalContext';
 import { GlobalModal } from './SimpleModal';
 import DetailModal from './DetailModal';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import styles from '@/styles/netflix/browse/components/netflixClient.module.scss';
 
 const NetflixClient = () => {
     const searchParams = useSearchParams();
     const selecteId = searchParams.get('id');
 
     const [data, setData] = useState([]);
-    console.log(data);
+    // console.log(data);
 
     // useEffect(() => {
     //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
@@ -34,9 +35,11 @@ const NetflixClient = () => {
 
     return (
         <ModalProvider>
-            <Header />
-            <Main />
-            <Footer />
+            <div id="wrap" className={selecteId ? styles.fixed : ''}>
+                <Header />
+                <Main />
+                <Footer />
+            </div>
             <GlobalModal />
 
             <AnimatePresence>{selecteId && <DetailModal id={selecteId} key="modal" />}</AnimatePresence>
