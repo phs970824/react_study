@@ -1,6 +1,6 @@
 'use client';
 // data
-import { heroCont, category1, category2, category3 } from '@/lib/api/netflix/mockData.json';
+import mockData from '@/lib/api/netflix/mockData.json';
 
 // component
 import HeroSection from './HeroSection';
@@ -11,7 +11,7 @@ import styles from '@/styles/netflix/browse/components/main.module.scss';
 import { useRef } from 'react';
 
 const Main = () => {
-    const heroData = heroCont;
+    const heroData = mockData.heroCont;
     const ovserverRef = useRef<HTMLDivElement | null>(null);
 
     // api 연결 전 임시 사용되는 mock 데이터
@@ -24,9 +24,9 @@ const Main = () => {
                 {/* {contents.map((item, index) => {
                     return <CardList key={index} data={item} />;
                 })} */}
-                <CardList data={category1} />
-                <CardList data={category2} />
-                <CardList data={category3} />
+                <CardList data={mockData.category1} />
+                <CardList data={mockData.category2} />
+                <CardList data={mockData.category3} />
             </section>
             <span></span>
         </main>

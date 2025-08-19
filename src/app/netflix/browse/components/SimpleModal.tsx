@@ -8,12 +8,13 @@ import IconButton from './IconButton';
 import Link from 'next/link';
 import { useModal } from './ModalContext';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 
 const SimpleModal = ({ data, isFirst, isLast }: { data: cardItemType; isFirst?: boolean; isLast?: boolean }) => {
     return (
         <div className={`${styles.simpleModalWrap} ${isFirst ? styles.first : ''} ${isLast ? styles.last : ''}`}>
             <div className={styles['i-box']}>
-                <img src={data.thumbnail} alt={data.title} />
+                <Image src={data.thumbnail} alt={data.title} />
             </div>
             <Link
                 href={{

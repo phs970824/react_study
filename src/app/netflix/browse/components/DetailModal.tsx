@@ -3,6 +3,7 @@ import IconTextButton from './IconTextButton';
 import IconButton from './IconButton';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const DetailModal = ({ id }: { id: string }) => {
     console.log(id);
@@ -61,11 +62,11 @@ const DetailModal = ({ id }: { id: string }) => {
 
                 <section className={styles.kv}>
                     <div className={styles['kv__thumb']}>
-                        <img src={data.thumbnail} alt="" />
+                        <Image src={data.thumbnail} alt="" style={{ objectFit: 'cover' }} />
                     </div>
                     <div className={styles['kv__info-box']}>
                         <div className={styles['kv__title']}>
-                            {data.titleImg ? <img src={data.titleImg} alt={data.title} /> : <h2>{data.title}</h2>}
+                            {data.titleImg ? <Image src={data.titleImg} alt={data.title} /> : <h2>{data.title}</h2>}
                         </div>
                         <div className={styles['kv__b-box']}>
                             <IconTextButton
