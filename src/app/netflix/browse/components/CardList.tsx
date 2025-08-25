@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import SliderItem from './CardItem';
+import SliderItem from '../../../../components/ui/CardItem';
 import { motion } from 'framer-motion';
 import { categoryType } from '@/lib/api/netflix/types';
 

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 // style
 import styles from '@/styles/netflix/browse/components/heroSection.module.scss';
-import IconButton from './IconTextButton';
+import IconButton from '../../../../components/ui/IconTextButton';
 
 const HeroSection = ({ heroData }: { heroData: heroContType }) => {
     const titleImageRef = useRef<HTMLImageElement>(null);

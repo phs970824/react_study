@@ -1,4 +1,3 @@
-'use client';
 import styles from '@/styles/netflix/browse/components/iconTextButton.module.scss';
 import Link from 'next/link';
 

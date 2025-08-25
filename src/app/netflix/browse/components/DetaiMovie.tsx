@@ -1,7 +1,7 @@
 import mockData from '@/lib/api/netflix/mockData.json';
 import Image from 'next/image';
 import Link from 'next/link';
-import IconButton from './IconButton';
+import IconButton from '../../../../components/ui/IconButton';
 
 import styles from '@/styles/netflix/browse/components/detailMovie.module.scss';
 

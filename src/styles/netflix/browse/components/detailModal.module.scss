@@ -50,11 +50,12 @@
     padding: 0px;
     border: none;
     border-radius: 50%;
-    svg {
-        width: 36px;
-        height: 36px;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    img {
         filter: invert(1);
-        padding: 8px;
     }
 }
 

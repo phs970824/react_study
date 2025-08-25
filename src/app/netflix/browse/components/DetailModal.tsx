@@ -1,12 +1,15 @@
-import mockData from '@/lib/api/netflix/mockData.json';
-import styles from '@/styles/netflix/browse/components/detailModal.module.scss';
-import IconTextButton from './IconTextButton';
-import IconButton from './IconButton';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
+
+// component
+import IconTextButton from '../../../../components/ui/IconTextButton';
+import IconButton from '../../../../components/ui/IconButton';
 import DetailMovie from './DetaiMovie';
 import DetailDrama from './DetailDrama';
+
+import mockData from '@/lib/api/netflix/mockData.json';
+import styles from '@/styles/netflix/browse/components/detailModal.module.scss';
 
 const DetailModal = ({ id }: { id: string }) => {
     console.log(id);
@@ -50,21 +53,7 @@ const DetailModal = ({ id }: { id: string }) => {
                         pathname: '/netflix/browse',
                     }}
                     className={styles['close-btn']}>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        role="img"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        data-icon="XStandard"
-                        aria-hidden="true">
-                        <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z"
-                            fill="currentColor"></path>
-                    </svg>
+                    <Image src="/images/icon/modal-close.svg" alt="close" width={24} height={24} />
                 </Link>
 
                 <section className={styles.kv}>

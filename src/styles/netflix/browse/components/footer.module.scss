@@ -16,6 +16,9 @@
     a {
         padding: 0 5px;
     }
+    img {
+        filter: brightness(0) invert(1);
+    }
 }
 
 .service {

@@ -2,8 +2,8 @@
 import { cardItemType } from '@/lib/api/netflix/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useModal } from './ModalContext';
 import { useEffect, useRef, useState } from 'react';
+import { useSimpleModalStore } from '@/store/modalStore';
 
 interface CardItemProps {
     item: cardItemType;
@@ -19,7 +19,7 @@ const HOVER_DELAY = 500;
 const CardItem = ({ item, className, isFirst = false, isLast = false }: CardItemProps) => {
     const cardItemRef = useRef<HTMLDivElement>(null);
     const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
-    const { openModal } = useModal();
+    const { openModal } = useSimpleModalStore();
 
     const handleMouseEnter = () => {
         if (hoverTimer) {
@@ -32,12 +32,12 @@ const CardItem = ({ item, className, isFirst = false, isLast = false }: CardItem
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-                openModal(
-                    item,
-                    { top: rect.top + scrollTop, left: rect.left + scrollLeft, width: rect.width, height: rect.height },
-                    isFirst,
-                    isLast
-                );
+                openModal(item, isFirst, isLast, {
+                    top: rect.top + scrollTop,
+                    left: rect.left + scrollLeft,
+                    width: rect.width,
+                    height: rect.height,
+                });
             }
         }, HOVER_DELAY);
 
